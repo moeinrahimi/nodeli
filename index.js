@@ -5,7 +5,7 @@ const fs = require('fs').promises
 const path =require('path')
 
 const makeFile = (bpath,file) => {
-  fs.writeFile(path.resolve(bpath,file)).catch(e=>console.log(e))
+  fs.writeFile(path.resolve(bpath,file),`//TODO: ${file}`).catch(e=>console.log(e))
 }
 const makeFolder = (bpath,name) => {
   fs.mkdir(path.resolve(bpath,name)).catch(e=>console.log(e))
